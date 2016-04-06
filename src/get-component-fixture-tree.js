@@ -24,7 +24,7 @@
   */
 module.exports = function() {
   var requireComponent = require.context('COSMOS_COMPONENTS', true),
-      isComponent = /^\.\/(.+)\.jsx?$/,
+      isComponent = /^\.\/(.+)(?!\-test)\.jsx?$/,
       components = {};
 
   requireComponent.keys().forEach(function(componentPath) {
